@@ -39,7 +39,6 @@ class Search extends Component {
 		.set('Accept', 'application/json')
 		.end((err, response) => {
 			const artist = response.body.artists.items[0]
-		//	console.log('RESPONSE: '+JSON.stringify(artist))
 			this.props.artistReceived(artist)
 		})
 	}
